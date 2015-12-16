@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html ng-app="SurveyApp">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <title>MasanSurvey</title>
+
+    <!-- MasanSurvey references -->
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <script src="scripts/jquery-2.1.4.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/angular-ui-router.min.js"></script>
+    <script src="scripts/angular-local-storage.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div style="font-size: medium" ui-view></div> 
+    <!-- Cordova reference, this is added to your app when it's built. -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+
+    <script src="scripts/index.js"></script>
+
+    <script src="js/app.js"></script>
+
+    <!-- Controller -->
+    <script src="js/controllers/LoginController.js"></script>
+    <script src="js/controllers/AccountController.js"></script>
+    <script src="js/controllers/DealerController.js"></script>
+    <script src="js/controllers/UpdateBoController.js"></script>
+    <script src="js/controllers/UpdateGaController.js"></script>
+    <script src="js/controllers/UpdateGiacamController.js"></script>
+    <script src="js/controllers/UpdateHeoController.js"></script>
+    <script src="js/controllers/UpdateVitController.js"></script>
+    <script src="js/controllers/SurveyController.js"></script>
+    <!-- Service -->
+    <script src="js/services/services.js"></script>
+    <script src="js/services/constant.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<div view-title="Danh Sách Đã Khảo Sát" ng-init="loadDealers(false)">
+    <div>
+        <!--<ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="loadDealers(true)">
+        </ion-refresher>
+        <ion-list>
+            <div style="margin: 0 auto; width:100px; padding-bottom:10px; padding-top:10px;" ng-if="loading">
+                <img src="img/loading.gif" style="vertical-align: middle;" >
+                <label style="color: gray;">
+                    Đang tải...
+                </label>
+            </div>
+            <div ng-if="!loading" style="margin: 0 auto; width:150px; padding-bottom:10px; padding-top:10px;">
+                <center>
+                    <label style="color: gray;">
+                        {{dealers.length}} khảo sát
+                    </label>
+                </center>
+            </div>-->
+        <div class="row" style="margin: 0 auto; width:100%; padding-bottom:10px; padding-top:10px;">
+                <center>
+                    <label ng-if="!loading" style="color: gray;">
+                        {{dealers.length}} khảo sát
+                    </label>
+                    <label ng-if="loading" style="color: gray;">
+                        Đang tải...
+                    </label>
+                    <a class="btn glyphicon glyphicon-refresh" style="font-size: larger; float: right; vertical-align: middle" ng-click="loadDealers(true)"></a>      
+                </center>
+                           
+        </div>
+        
+
+        <ul class="list-group">
+            <li class="list-group-item row" ng-repeat="dealer in dealers" type="item-text-wrap" href="#/tabs/dealers/{{dealer.SurveyId}}" ng-click="dealerDetail(dealer.DealerId, dealer.SurveyId)">
+                <div class="col-xs-2" >
+                    <img style="width:70px; height:70px" class="" ng-if="dealer.DealerPhoto" ng-src="{{serviceBase}}{{dealer.DealerPhoto}}">
+                    <img class="img-responsive" ng-if="!dealer.DealerPhoto" src="img/no-image.png">
+                </div>
+                <div class="col-xs-9">
+                    <h4>Mã: {{dealer.DealerId}}</h4>
+                    <h4>{{dealer.DealerName}}</h4>
+                    <p>{{dealer.ProvinceName}}</p>
+                    <p>{{dealer.Address}}</p>
+                    <label class="error"> {{dealer.Message}}</label>
+                    
+                    <!--<ion-option-button class="button-assertive" ng-click="remove(dealer)">
+            Delete
+        </ion-option-button>-->
+            </li>
+        </ul>
+            <!--</ion-list>-->
+</div>
+</div>
